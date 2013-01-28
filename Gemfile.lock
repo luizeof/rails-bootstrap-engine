@@ -43,15 +43,13 @@ GEM
     default_value_for (2.0.1)
     delocalize (0.3.1)
       rails (>= 3.0)
-    devise (2.2.2)
+    devise (2.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
     devise-i18n (0.5.12)
     erubis (2.7.0)
-    execjs (1.4.0)
-      multi_json (~> 1.0)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -117,10 +115,6 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    twitter-bootstrap-rails (2.2.0)
-      actionpack (>= 3.1)
-      execjs
-      railties (>= 3.1)
     tzinfo (0.3.35)
     warden (1.2.1)
       rack (>= 1.0)
@@ -141,5 +135,4 @@ DEPENDENCIES
   rails-bootstrap-engine!
   simple_form
   sqlite3
-  twitter-bootstrap-rails
   will_paginate
