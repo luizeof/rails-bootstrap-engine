@@ -9,6 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require rails-bootstrap-engine
+ *= require bootstrap
+ *= require bootstrap-responsive
+ *= require font-awesome-more
+ *= require font-awesome-more-ie7
+ *= require glyphicons-pro
+ *= require_tree ./bootstrap-plugins
+ *= require_tree ./orangeweb-bootstrap-toolkit
  *= require_tree .
  */

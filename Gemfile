@@ -8,6 +8,24 @@ gemspec
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 
+gem 'simple_form'
+
+gem 'devise'
+
+gem 'magic_encoding'
+
+gem "paperclip"
+
+gem "will_paginate"
+
+gem 'default_value_for'
+
+gem 'delocalize'
+
+gem 'orangeweb-tasks'
+
+gem 'jquery-ui-rails'
+
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
 # Git. Remember to move these dependencies to your gemspec before releasing

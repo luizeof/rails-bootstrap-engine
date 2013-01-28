@@ -1,0 +1,50 @@
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">Informações sobre a Conta</a></li>
+    <li><a href="#tab2" data-toggle="tab">Apagar Minha Conta</a></li>
+  </ul>
+  
+  
+  
+  <div class="tab-content">
+  
+    <div class="tab-pane active" id="tab1">
+
+			<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+			
+			  <%= f.error_notification %>
+			
+			  <div class="form-inputs">
+			    <%= f.input :email, :required => true, :autofocus => true %>
+			    <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
+			    <%= f.input :password_confirmation, :required => false %>
+			    <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
+			  </div>
+			
+			  <div class="form-actions">
+			    <%= f.button :submit, "Update" %>
+			  </div>
+			  
+			<% end %>
+
+
+    </div>
+    
+    <div class="tab-pane" id="tab2">
+
+
+			<h3>Cancel my account</h3>
+			
+			<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+
+
+    </div>
+    
+  </div><!-- end: #tab-content -->
+
+
+
+
+
+
+<%= link_to "Back", :back %>
