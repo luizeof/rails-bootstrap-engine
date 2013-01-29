@@ -7,18 +7,16 @@ require "rails-bootstrap-engine/version"
 Gem::Specification.new do |s|
   s.name        = "rails-bootstrap-engine"
   s.version     = RailsBootstrapEngine::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsBootstrapEngine."
-  s.description = "TODO: Description of RailsBootstrapEngine."
+  s.authors     = ["Luiz Eduardo de Oliveira Fonseca", "Agencia Orangeweb"]
+  s.email       = ["luizeof@gmail.com"]
+  s.homepage    = "https://github.com/orangeweb/rails-bootstrap-engine"
+  s.summary     = "Ruby on Rails Engine for Twitter Bootstrap ."
+  s.description = "Ruby on Rails Engine for Twitter Bootstrap with Assets, Helpers ans more."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.11"
-  s.add_dependency "devise"
-  s.add_dependency "devise-i18n"  
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
