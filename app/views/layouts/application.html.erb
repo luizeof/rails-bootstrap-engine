@@ -51,6 +51,9 @@
               <li><%= link_to "Link1", "/path1"  %></li>
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
+	            <% if user_signed_in? then %>
+	              <li><a href="<%= edit_user_registration_path %>">Minha Conta</a></li>
+	            <% end %>               
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -70,6 +73,9 @@
                 <li><%= link_to "Link1", "/path1"  %></li>
                 <li><%= link_to "Link2", "/path2"  %></li>
                 <li><%= link_to "Link3", "/path3"  %></li>
+	            <% if user_signed_in? then %>
+	              <li><a href="<%= edit_user_registration_path %>">Minha Conta</a></li>
+	            <% end %>                 
               </ul>
             </div><!--/.well -->
           </div><!--/span-->

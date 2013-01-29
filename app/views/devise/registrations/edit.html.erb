@@ -1,6 +1,11 @@
+<% content_for :page_header do %>
+	<h1>Minha Conta <small><%= current_user.email %></small></h1>
+	<% page_title "Bem Vindo" %>
+<% end %>
+
 
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#tab1" data-toggle="tab">Informações sobre a Conta</a></li>
+    <li class="active"><a href="#tab1" data-toggle="tab">Informações sobre Minha Conta</a></li>
     <li><a href="#tab2" data-toggle="tab">Apagar Minha Conta</a></li>
   </ul>
   
@@ -12,39 +17,63 @@
 
 			<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
 			
-			  <%= f.error_notification %>
+			  	<div class="row-fluid">
+	            	<div class="span12">
+	            				  
+					  <h3>Autenticação <small class="text-error"><i class="icon-warning-sign"></i> Você precisa informar sua senha atual para confirmar as alterações.</small></h3>
+											  
+	            	</div>
+			  	</div>
+			  	
+			  
+			  	<div class="row-fluid">
+	            	<div class="span4">
+	            		<%= f.input :email, :required => true, :autofocus => true, :label => false, :placeholder => "Email", :input_html => {:class => "span12"} %>
+	            	</div>
+	            	
+	            	<div class="span4">
+	            		<%= f.input :password, :autocomplete => "off", :required => false, :label => false, :placeholder => "Digite sua Nova Senha", :input_html => {:class => "span12"} %>
+	            	</div>
+	            	
+	            	<div class="span4">
+	            		<%= f.input :password_confirmation, :required => false, :label => false, :placeholder => "Confirme a Nova Senha", :input_html => {:class => "span12"} %>
+	            	</div>
+			  	</div>            		            	  
 			
-			  <div class="form-inputs">
-			    <%= f.input :email, :required => true, :autofocus => true %>
-			    <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-			    <%= f.input :password_confirmation, :required => false %>
-			    <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
-			  </div>
-			
-			  <div class="form-actions">
-			    <%= f.button :submit, "Update" %>
-			  </div>
+			  	<hr />
+			 
+			  	<div class="row-fluid">
+	            	<div class="span12">
+	            	
+					  <div class="well">
+					  <h3>Deseja salvar as alterações?</h3>
+					  <p>Você precisa informar sua senha atual para confirmar as alterações</p>
+					  	<div class="row-fluid">
+			            	<div class="span6">
+				            	<%= f.input :current_password, :required => true, :label => false, :placeholder => "Digite sua Senha Atual", :input_html => {:class => "span12"} %>
+			            	</div>
+			            	<div class="span4">
+			            		<%= f.button :submit, "Salvar Alterações", :class => "btn btn-success" %>
+			            	</div>
+					  	</div>
+					  </div>
+					              	
+	            	</div>
+			  	</div>			    
 			  
 			<% end %>
-
 
     </div>
     
     <div class="tab-pane" id="tab2">
 
 
-			<h3>Cancel my account</h3>
+			<h3>Cancelar Minha Conta</h3>
 			
-			<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+			<p>Deseja <%= link_to "cancelar sua conta?", registration_path(resource_name), :data => { :confirm => "Tem certeza que deseja cancelar sua conta?" }, :method => :delete %>.</p>
 
 
     </div>
     
   </div><!-- end: #tab-content -->
 
-
-
-
-
-
-<%= link_to "Back", :back %>
