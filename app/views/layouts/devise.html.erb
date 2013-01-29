@@ -37,7 +37,7 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
-  <body>
+  <body id="devise">
 
     <div class="navbar navbar-top">
       <div class="navbar-inner">
@@ -166,7 +166,7 @@
         </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <%= copyright_info %>
       </footer>
 
     </div> <!-- /container -->
