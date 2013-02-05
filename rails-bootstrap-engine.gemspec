@@ -8,12 +8,12 @@ Gem::Specification.new do |s|
   s.name        = "rails-bootstrap-engine"
   s.version     = RailsBootstrapEngine::VERSION
   s.authors     = ["Luiz Eduardo de Oliveira Fonseca", "Agencia Orangeweb"]
-  s.email       = ["luizeof@gmail.com"]
+  s.email       = ["luizeof@gmail.com", "atendimento@orangeweb.com.br"]
   s.homepage    = "https://github.com/orangeweb/rails-bootstrap-engine"
   s.summary     = "Ruby on Rails Engine for Twitter Bootstrap ."
-  s.description = "Ruby on Rails Engine for Twitter Bootstrap with Assets, Helpers ans more."
+  s.description = "Ruby on Rails Engine for Twitter Bootstrap with Assets, Helpers and more."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.11"
