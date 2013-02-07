@@ -1,2 +1,28 @@
 <h1>Test#index</h1>
 <p>Find me in app/views/test/index.html.erb</p>
+
+
+
+<div class="tabbable">
+
+<%=
+    nav_tabs do |nav|
+	    nav.nav_tab_link "Nav1", "#tab1"
+	    nav.nav_tab_link "Nav2", "#tab2"
+    end
+%>
+
+  <div class="tab-content">
+    <div class="tab-pane" id="tab1">
+      <p>I'm in Section 1.</p>
+    </div>
+    <div class="tab-pane" id="tab2">
+      <p>Howdy, I'm in Section 2.</p>
+    </div>
+  </div>
+    
+</div>
+
+
+
+
