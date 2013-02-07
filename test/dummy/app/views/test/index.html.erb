@@ -3,26 +3,10 @@
 
 
 
-<div class="tabbable">
 
 <%=
-    nav_tabs do |nav|
-	    nav.nav_tab_link "Nav1", "#tab1"
-	    nav.nav_tab_link "Nav2", "#tab2"
+    nav_pills do |nav|
+	    nav.nav_link "Nav1", root_path
+	    nav.nav_link "Nav2", root_path
     end
 %>
-
-  <div class="tab-content">
-    <div class="tab-pane" id="tab1">
-      <p>I'm in Section 1.</p>
-    </div>
-    <div class="tab-pane" id="tab2">
-      <p>Howdy, I'm in Section 2.</p>
-    </div>
-  </div>
-    
-</div>
-
-
-
-

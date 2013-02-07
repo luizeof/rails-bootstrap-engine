@@ -28,7 +28,8 @@ module RailsBootstrapEngine
 
         @elements.each do |e|
           html_class = build_html_class(e)
-          html << content_tag(:li, e.to_s, html_class)
+          #html << content_tag(:li, e.to_s, html_class)
+          html << e.to_s
         end
 
         html.html_safe
