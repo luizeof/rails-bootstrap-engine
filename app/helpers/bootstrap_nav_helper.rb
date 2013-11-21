@@ -19,76 +19,10 @@ module BootstrapNavHelper
 
 
 
-
-
-	# 
-    def nav_pills
-	    elements = RailsBootstrapEngine::BootstrapMarkupCollection.new(self)
-	    yield elements
-	    options = {}
-	    options[:type] = :pills
-	    RailsBootstrapEngine::Navigation.new(elements, options).to_s
-    end
-    
-    
-    
-    
-    
-    
-	# 
-    def nav_pills_stacked
-	    elements = RailsBootstrapEngine::BootstrapMarkupCollection.new(self)
-	    yield elements
-	    options = {}
-	    options[:type] = :pills
-	    options[:stacked] = true
-	    RailsBootstrapEngine::Navigation.new(elements, options).to_s
-    end
-    
-    
-        
-        
-        
-    
-    
-	# 
-    def nav_tabs
-	    elements = RailsBootstrapEngine::BootstrapMarkupCollection.new(self)
-	    yield elements
-	    options = {}
-	    options[:type] = :tabs
-	    RailsBootstrapEngine::Navigation.new(elements,options).to_s
-    end
-    
-    
-    
-    
-    
-    
-    
-	# 
-    def nav_tabs_stacked
-	    elements = RailsBootstrapEngine::BootstrapMarkupCollection.new(self)
-	    yield elements
-	    options = {}
-	    options[:type] = :pills
-	    options[:stacked] = true
-	    RailsBootstrapEngine::Navigation.new(elements,options).to_s
-    end     
-
-
-
-
-
-
-
-
 	# Sidebar block
 	def sidebar &block 
 		content_tag(:div, capture(&block), :class => "well sidebar-nav" )
 	end
-	
-	
 	
 	
 	
@@ -101,7 +35,18 @@ module BootstrapNavHelper
 	def nav_list &block  
 		content_tag(:ul, capture(&block), :class => "nav nav-list" )
 	end
-	
+	    
+	    
+	    
+	    
+	# Nav-pills block
+	#
+	#	<ul class="nav nav-pills">
+	#		... link itens ...
+	#	</ul>
+	def nav_pills &block  
+		content_tag(:ul, capture(&block), :class => "nav nav-pills" )
+	end
 	
 	
 	
@@ -137,17 +82,6 @@ module BootstrapNavHelper
 				link_to( title, link, opts)
 			end
 		end
-	end
-	
-	
-	
-	
-	# Output a Nav Link fot use with Tabs
-	#
-	#	<li><a href="#" data-toggle="tab">Link</a></li>
-	def nav_tab_link(title, link, opts={})
-		opts[:data] = {:toggle => :tab}
-		link_to( title, link, opts)
 	end
 
 
