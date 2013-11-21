@@ -32,3 +32,8 @@ gem 'jquery-ui-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :development do
+  gem "better_errors"
+  gem 'meta_request', '0.2.1'
+end
